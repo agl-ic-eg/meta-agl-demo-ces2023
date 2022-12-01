@@ -16,18 +16,18 @@ sudo parted -s -a optimal $1 -- mkpart primary ext4 26GB 27GB
 sudo parted -s -a optimal $1 -- mkpart primary ext4 27GB 28GB
 sudo parted -s -a optimal $1 -- mkpart primary ext4 28GB 29GB
 
-sudo mkfs.ext4 $11 -L host -F
-sudo mkfs.ext4 $12 -L agl-cluster -F
-sudo mkfs.ext4 $13 -L agl-momi-ivi -F
-sudo mkfs.ext4 $14 -L agl-qt-ivi -F
-sudo mkfs.ext4 $15 -L agl-flutter-ivi -F
-sudo mkfs.ext4 $16 -L agl-html5-ivi -F
-sudo mkfs.ext4 $17 -L agl-other -F
-sudo mkfs.ext4 $18 -L nvhost -F
-sudo mkfs.ext4 $19 -L nv-cluster -F
-sudo mkfs.ext4 $110 -L nv-momi-ivi -F
-sudo mkfs.ext4 $111 -L nv-qt-ivi -F
-sudo mkfs.ext4 $112 -L nv-flutter-ivi -F
-sudo mkfs.ext4 $113 -L nv-html5-ivi -F
-sudo mkfs.ext4 $114 -L nv-other -F
+sudo mkfs.ext4 ${1}p1 -L host -F
+sudo mkfs.ext4 ${1}p2 -L agl-cluster -F
+sudo mkfs.ext4 ${1}p3 -L agl-momi-ivi -F
+sudo mkfs.ext4 ${1}p4 -L agl-qt-ivi -F
+sudo mkfs.ext4 ${1}p5 -L agl-flutter-ivi -F
+sudo mkfs.ext4 ${1}p6 -L agl-html5-ivi -F
+sudo mkfs.ext4 ${1}p7 -L agl-other -F
+sudo mkfs.ext4 ${1}p8 -L nvhost -F
+sudo mkfs.ext4 ${1}p9 -L nv-cluster -F
+sudo mkfs.ext4 ${1}p10 -L nv-momi-ivi -F
+sudo mkfs.ext4 ${1}p11 -L nv-qt-ivi -F
+sudo mkfs.ext4 ${1}p12 -L nv-flutter-ivi -F
+sudo mkfs.ext4 ${1}p13 -L nv-html5-ivi -F
+sudo mkfs.ext4 ${1}p14 -L nv-other -F
 
